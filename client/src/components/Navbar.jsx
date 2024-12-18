@@ -25,6 +25,7 @@ const Navbar = () => {
                 </div>
                 {/* user icon and dark mode icon */}
                 <div className='flex items-center gap-8'>
+                  <h1>hellos</h1>
                     {
                         user? (
                             <DropdownMenu >

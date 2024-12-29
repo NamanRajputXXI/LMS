@@ -4,36 +4,54 @@ import Login from "./pages/Login";
 import HeroSection from "./pages/student/HeroSection";
 import MainLayout from "./layout/MainLayout";
 import Courses from "./pages/student/Courses";
-const appRouter = createBrowserRouter([{
-  path:"/",
-  element:<MainLayout/>,
-  children:[
+import MyLearning from "./pages/student/MyLearning";
+import Profile from "./pages/student/Profile";
+const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <MainLayout />,
+    children: [
       {
-          path:"/",
-          element:(
-              <>
-              <HeroSection/>
-              <Courses/>
-              </>
-          )
-         
+        path: "/",
+        element: (
+          <>
+            <HeroSection />
+            <Courses />
+          </>
+        ),
       },
       {
-          path:"login",
-          element:(
-              <>
-              <Login/>
-              </>
-          )
-      }
-  ]
-}])
+        path: "login",
+        element: (
+          <>
+            <Login />
+          </>
+        ),
+      },
+      {
+        path: "my-learning",
+        element: (
+          <>
+            <MyLearning />
+          </>
+        ),
+      },
+      {
+        path: "profile",
+        element: (
+          <>
+            <Profile />
+          </>
+        ),
+      },
+    ],
+  },
+]);
 
 function App() {
- 
   return (
     <main>
-    <RouterProvider router={appRouter}/>
+      <RouterProvider router={appRouter} />
     </main>
   );
 }
